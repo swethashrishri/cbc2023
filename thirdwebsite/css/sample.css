@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+.nav-div {
+    flex: 0 0 25%; /* Fixed width for nav */
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.content-div {
+    flex: 0 0 75%; /* Remaining width for content */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.vertical-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Resets default margin */
+}
+
+.vertical-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures image takes full available width */
+}
+
+.tagline {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+    .nav-div, .content-div {
+        flex-basis: 100%;
+    }
+}
